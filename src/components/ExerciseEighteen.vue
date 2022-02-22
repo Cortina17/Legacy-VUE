@@ -24,7 +24,9 @@
 <script>
 export default {
   name: "ExerciseEighteen",
-  data: () => ({}),
+  data: () => ({
+    GradesList: [],
+  }),
 
   methods: {
     examGrade() {
@@ -33,7 +35,9 @@ export default {
       let num = parseInt(document.getElementById("numExerciseEighteen").value);
 
       let printResult = document.getElementById("resultExerciseEighteen");
-      printResult.innerHTML = "<p>";
+      // printResult.innerHTML = "<p>";
+      printResult.push(this.GradesList);
+      this.GradesList.innerHTML = "<p>";
 
       if (num) {
         if (num < 3) {
