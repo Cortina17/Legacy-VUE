@@ -2,18 +2,20 @@
   <div>
     <h2>18.- Calificación Examen</h2>
     <div>
-      <input type="text" placeholder="Nombre" id="alumName" required />
+      <form @submit.prevent="onSubmit()">
+        <input type="text" placeholder="Nombre" id="alumName" required />
 
-      <input type="text" placeholder="Materia" id="subjectName" required />
+        <input type="text" placeholder="Materia" id="subjectName" required />
 
-      <input
-        type="number"
-        placeholder="Escriba nota entre 0 y 10"
-        id="numExerciseEighteen"
-        required
-      />
+        <input
+          type="number"
+          placeholder="Escriba nota entre 0 y 10"
+          id="numExerciseEighteen"
+          required
+        />
 
-      <button v-on:click="examGrade()">Aceptar</button>
+        <button type="submit" v-on:click="examGrade()">Aceptar</button>
+      </form>
     </div>
     <div id="resultExerciseEighteen"></div>
   </div>
