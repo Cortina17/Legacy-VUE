@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h2>18.- Calificación Examen</h2>
+  <div class="container">
+    <div>
+      <h2>Boletín de notas</h2>
+    </div>
     <div>
       <form @submit.prevent="onSubmit()">
         <input type="text" placeholder="Nombre" id="alumName" required />
@@ -111,3 +113,10 @@ export default {
   },
 };
 </script>
+<style>
+#resultExerciseEighteen {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+</style>
