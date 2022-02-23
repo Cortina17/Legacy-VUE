@@ -24,9 +24,11 @@
 <script>
 export default {
   name: "ExerciseEighteen",
-  data: () => ({
-    GradesList: [],
-  }),
+  data() {
+    return {
+      GradesList: ["Juan, tu nota en cono es 4"],
+    };
+  },
 
   methods: {
     examGrade() {
@@ -35,8 +37,8 @@ export default {
       let num = parseInt(document.getElementById("numExerciseEighteen").value);
 
       let printResult = document.getElementById("resultExerciseEighteen");
-      // printResult.innerHTML = "<p>";
-      printResult.push(this.GradesList);
+      printResult.innerHTML = "<p>";
+      // printResult.push(this.GradesList);
       this.GradesList.innerHTML = "<p>";
 
       if (num) {
@@ -102,6 +104,9 @@ export default {
         }
       }
       printResult.innerHTML += "Introduzca una nota entre 0 y 10";
+    },
+    addTo() {
+      this.GradesList.push();
     },
   },
 };
