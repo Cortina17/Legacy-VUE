@@ -28,7 +28,7 @@ export default {
   name: "ExerciseEighteen",
   data() {
     return {
-      GradesList: ["Juan, tu nota en cono es 4"],
+      GradesList: [""],
     };
   },
 
@@ -51,7 +51,7 @@ export default {
             subject +
             " es: " +
             num +
-            " - La calificación es MUY DEFICIENTE";
+            " - La calificación es MUY DEFICIENTE <br>";
           return;
         }
         if (num < 5) {
@@ -61,7 +61,7 @@ export default {
             subject +
             " es: " +
             num +
-            " - La calificación es INSUFICIENTE";
+            " - La calificación es INSUFICIENTE <br>";
           return;
         }
         if (num < 6) {
@@ -71,7 +71,7 @@ export default {
             subject +
             " es: " +
             num +
-            " - La calificación es SUFICIENTE";
+            " - La calificación es SUFICIENTE <br>";
           return;
         }
         if (num < 7) {
@@ -81,7 +81,7 @@ export default {
             subject +
             " es: " +
             num +
-            " - La calificación es BIEN";
+            " - La calificación es BIEN <br>";
           return;
         }
         if (num < 9) {
@@ -91,7 +91,7 @@ export default {
             subject +
             " es: " +
             num +
-            " - La calificación es NOTABLE";
+            " - La calificación es NOTABLE <br>";
           return;
         }
         if (num <= 10) {
@@ -101,7 +101,7 @@ export default {
             subject +
             " es: " +
             +num +
-            " - La calificación es SOBRESALIENTE";
+            " - La calificación es SOBRESALIENTE <br>";
           return;
         }
       }
