@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="d-flex justify-center">
-      <h2>Boletín de notas</h2>
+      <h1>Boletín de notas</h1>
     </div>
     <div>
       <form @submit.prevent>
@@ -41,7 +41,7 @@
         </v-btn>
       </form>
     </div>
-    <div id="result"></div>
+    <div id="result">pipo</div>
   </div>
 </template>
 
@@ -49,9 +49,7 @@
 export default {
   name: "ExerciseEighteen",
 
-  data: () => ({
-    //
-  }),
+  data: () => ({}),
 
   methods: {
     examGrade() {
@@ -62,67 +60,65 @@ export default {
 
       let printResult = document.getElementById("result");
 
-      if (num) {
-        if (num < 3) {
-          printResult.innerHTML +=
-            name +
-            ", tu nota en " +
-            subject +
-            " es: " +
-            num +
-            " - La calificación es MUY DEFICIENTE. <br>";
-          return;
-        }
-        if (num < 5) {
-          printResult.innerHTML +=
-            name +
-            ", tu nota en " +
-            subject +
-            " es: " +
-            num +
-            " - La calificación es INSUFICIENTE. <br>";
-          return;
-        }
-        if (num < 6) {
-          printResult.innerHTML +=
-            name +
-            ", tu nota en " +
-            subject +
-            " es: " +
-            num +
-            " - La calificación es SUFICIENTE. <br>";
-          return;
-        }
-        if (num < 7) {
-          printResult.innerHTML +=
-            name +
-            ", tu nota en " +
-            subject +
-            " es: " +
-            num +
-            " - La calificación es BIEN. <br>";
-          return;
-        }
-        if (num < 9) {
-          printResult.innerHTML +=
-            name +
-            ", tu nota en " +
-            subject +
-            " es: " +
-            num +
-            " - La calificación es NOTABLE. <br>";
-          return;
-        }
-        if (num <= 10) {
-          printResult.innerHTML +=
-            name +
-            ", tu nota en " +
-            subject +
-            " es: " +
-            +num +
-            " - La calificación es SOBRESALIENTE. <br>";
-          return;
-        }
+      if (num < 3) {
+        printResult.innerHTML +=
+          name +
+          ", tu nota en " +
+          subject +
+          " es: " +
+          num +
+          " - La calificación es MUY DEFICIENTE. <br>";
+        return;
+      }
+      if (num < 5) {
+        printResult.innerHTML +=
+          name +
+          ", tu nota en " +
+          subject +
+          " es: " +
+          num +
+          " - La calificación es INSUFICIENTE. <br>";
+        return;
+      }
+      if (num < 6) {
+        printResult.innerHTML +=
+          name +
+          ", tu nota en " +
+          subject +
+          " es: " +
+          num +
+          " - La calificación es SUFICIENTE. <br>";
+        return;
+      }
+      if (num < 7) {
+        printResult.innerHTML +=
+          name +
+          ", tu nota en " +
+          subject +
+          " es: " +
+          num +
+          " - La calificación es BIEN. <br>";
+        return;
+      }
+      if (num < 9) {
+        printResult.innerHTML +=
+          name +
+          ", tu nota en " +
+          subject +
+          " es: " +
+          num +
+          " - La calificación es NOTABLE. <br>";
+        return;
+      }
+      if (num <= 10) {
+        printResult.innerHTML +=
+          name +
+          ", tu nota en " +
+          subject +
+          " es: " +
+          +num +
+          " - La calificación es SOBRESALIENTE. <br>";
+        return;
       }
       printResult.innerHTML += "Introduzca una nota entre 0 y 10";
     },

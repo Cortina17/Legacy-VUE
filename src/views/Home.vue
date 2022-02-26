@@ -1,5 +1,7 @@
 <template>
-  <exercise-eighteen />
+  <div class="container">
+    <exercise-eighteen />
+  </div>
 </template>
 
 <script>
