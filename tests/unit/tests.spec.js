@@ -1,8 +1,8 @@
 import { mount } from "@vue/test-utils";
 import ExerciseEighteen from "@/components/ExerciseEighteen.vue";
 
-describe("Home", () => {
-  it("rendering component inside home", () => {
+describe("Component", () => {
+  it("rendering component", () => {
     const wrapper = mount(ExerciseEighteen);
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.attributes("class")).toBe("container");
@@ -18,7 +18,7 @@ describe("Notes", () => {
   });
   it("should render subject name in the component", () => {
     const wrapper = mount(ExerciseEighteen);
-    const input = wrapper.get("input");
+    const input = wrapper.findAll("input").at(1);
     expect(input.attributes("id")).toBe("subjectName");
   });
 });
