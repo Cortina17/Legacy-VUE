@@ -24,10 +24,10 @@ describe("Notes", () => {
 });
 
 describe("Results", () => {
-  it("should render alumn names", async () => {
+  it("should render alumn names in page", async () => {
     const wrapper = mount(ExerciseEighteen);
-    await wrapper.find("result").setValue("pipo");
-    const result = wrapper.get("result");
+    await wrapper.findAll("div").at(3);
+    const result = wrapper.get("#result");
     expect(result.html()).toContain("pipo");
   });
 });
