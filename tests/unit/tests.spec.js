@@ -1,4 +1,4 @@
-import { mount } from "@vue/test-utils";
+import { mount, shallowMount } from "@vue/test-utils";
 import ExerciseEighteen from "@/components/ExerciseEighteen.vue";
 
 describe("Component", () => {
@@ -24,10 +24,13 @@ describe("Notes", () => {
 });
 
 describe("Results", () => {
-  it("should render alumn names in page", async () => {
-    const wrapper = mount(ExerciseEighteen);
+  it("should render alumn names and grade in page", async () => {
+    const wrapper = shallowMount(ExerciseEighteen);
     await wrapper.findAll("div").at(3);
+    // await wrapper.find("div").setValue("pipo");
     const result = wrapper.get("#result");
-    expect(result.html()).toContain("pipo");
+    expect(result.html()).toContain(
+      "María, tu nota en Cono es: 5 - La calificación es SUFICIENTE."
+    );
   });
 });

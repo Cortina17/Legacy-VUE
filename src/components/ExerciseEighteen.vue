@@ -41,7 +41,9 @@
         </v-btn>
       </form>
     </div>
-    <div id="result">pipo</div>
+    <div id="result">
+      María, tu nota en Cono es: 5 - La calificación es SUFICIENTE.
+    </div>
   </div>
 </template>
 
