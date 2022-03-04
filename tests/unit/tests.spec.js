@@ -1,6 +1,24 @@
-import { mount, shallowMount } from "@vue/test-utils";
+import Vuetify from "vuetify";
+
+import { createLocalVue, mount, shallowMount } from "@vue/test-utils";
 import ExerciseEighteen from "@/components/ExerciseEighteen.vue";
 
+describe("Exercise Eighteen", () => {
+  const LocalVue = createLocalVue();
+  let vuetify;
+
+  beforeEach(() => {
+    vuetify = new Vuetify();
+  });
+  it("should render the v-btn component", () => {
+    const wrapper = mount(ExerciseEighteen, {
+      LocalVue,
+      vuetify,
+    });
+    const button = wrapper.find("v-btn");
+    expect(button.exists()).toBe(true);
+  });
+});
 describe("Component", () => {
   it("rendering component", () => {
     const wrapper = mount(ExerciseEighteen);
